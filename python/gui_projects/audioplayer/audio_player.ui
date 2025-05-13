@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>700</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>PlayerForever</string>
+  </property>
+  <property name="toolTipDuration">
+   <number>1</number>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LayoutDirection::LeftToRight</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(48, 48, 48);</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::TabShape::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>640</width>
+     <height>360</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <fontweight>Black</fontweight>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QTableWidget" name="song_table">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget {
+    border: none;
+    color: white;
+    font-family: &quot;Montserrat&quot;;
+    gridline-color: #555555;
+    background-color: transparent;
+}
+
+QTableWidget::item {
+    border-bottom: 1px solid #d0d0d0;
+}
+
+QTableWidget::item:selected {
+    background-color: #aaffff;
+    color: black;
+}
+
+QHeaderView::section {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    font-weight: bold;
+    color: white;
+    font-family: &quot;Montserrat&quot;;
+}</string>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>Название</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Тип</string>
+       </property>
+      </column>
+      <item row="0" column="0">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item row="1" column="0">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item row="2" column="0">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item row="3" column="0">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item row="4" column="0">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item row="8" column="0">
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item alignment="Qt::AlignmentFlag::Qt::AlignmentFlag::AlignBottom">
+     <widget class="QFrame" name="frame">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>125</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(37, 37, 37);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="leftMargin">
+        <number>9</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <property name="leftMargin">
+          <number>5</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>5</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QToolButton" name="prev_track_bt">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="toolTip">
+            <string>Previous</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton {
+width: 40px;
+height: 40px;
+border: 7px;
+border-width: 3px;
+border-color: orange;
+border-radius: 21px;
+}
+QToolButton::hover {
+background-color: rgb(60, 60, 60);
+}</string>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icons/skip_previous_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.png</normaloff>:/icons/skip_previous_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="shortcut">
+            <string>Ctrl+Left</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="play_pause_bt">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="toolTipDuration">
+            <number>-1</number>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LayoutDirection::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton {
+border: 1px solid;
+border-radius: 25.4px;
+border-width: 3px;
+border-color: white;
+}
+QToolButton::hover {
+background-color: rgb(60, 60, 60);
+}
+</string>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icons/play_arrow_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24 (1).png</normaloff>
+             <normalon>:/icons/pause_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.png</normalon>
+             <disabledoff>:/icons/pause_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.png</disabledoff>:/icons/play_arrow_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24 (1).png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>42</width>
+             <height>42</height>
+            </size>
+           </property>
+           <property name="shortcut">
+            <string>Space</string>
+           </property>
+           <property name="arrowType">
+            <enum>Qt::ArrowType::NoArrow</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="next_track_bt">
+           <property name="font">
+            <font>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="toolTip">
+            <string>Next</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton {
+width: 40px;
+height: 40px;
+border: 7px;
+border-width: 3px;
+border-color: orange;
+border-radius: 21px;
+}
+QToolButton::hover {
+background-color: rgb(60, 60, 60);
+}</string>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icons/skip_next_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.png</normaloff>:/icons/skip_next_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="shortcut">
+            <string>Ctrl+Right</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSlider" name="playback_sl">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QSlider::groove:horizontal {
+	height: 1px;
+	border: 1px solid #ffffff;
+	border-radius: 1px; 
+}
+
+QSlider::handle:horizontal {
+	background-color: rgb(41, 144, 255);
+	width: 10px;
+	margin: -5px -1px;
+	border-radius: 5px ;
+	border: 1px solid rgb(42, 92, 255);
+}
+
+QSlider::add-page:horizontal {
+	background: #ffffff
+}
+
+QSlider::sub-page:horizontal {
+	background-color: rgb(41, 144, 255);
+}
+</string>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::TickPosition::NoTicks</enum>
+           </property>
+           <property name="tickInterval">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="time_lb">
+           <property name="font">
+            <font>
+             <family>Montserrat</family>
+             <pointsize>12</pointsize>
+             <italic>false</italic>
+             <bold>false</bold>
+             <underline>false</underline>
+             <kerning>true</kerning>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>00:00:00</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0,0">
+         <property name="spacing">
+          <number>6</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QToolButton" name="mute_unmute_bt">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>45</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton {
+width: 40px;
+height: 40px;
+border: 7px;
+border-width: 3px;
+border-color: orange;
+border-radius: 21px;
+}
+QToolButton::hover {
+background-color: rgb(60, 60, 60);
+}</string>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/icons/volume_off_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.png</normaloff>
+             <normalon>:/icons/volume_up_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.png</normalon>:/icons/volume_off_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="shortcut">
+            <string>M</string>
+           </property>
+           <property name="popupMode">
+            <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+           </property>
+           <property name="autoRaise">
+            <bool>false</bool>
+           </property>
+           <property name="arrowType">
+            <enum>Qt::ArrowType::NoArrow</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSlider" name="volume_sl">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>123</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>195</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::FocusPolicy::TabFocus</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QSlider::groove:horizontal {
+	height: 1px;
+	border: 1px solid #ffffff;
+	border-radius: 1px; 
+}
+
+QSlider::handle:horizontal {
+	background-color: rgb(41, 144, 255);
+	width: 10px;
+	margin: -5px -1px;
+	border-radius: 5px ;
+	border: 1px solid rgb(42, 92, 255);
+}
+
+QSlider::add-page:horizontal {
+	background: #ffffff
+}
+
+QSlider::sub-page:horizontal {
+	background-color: rgb(41, 144, 255);
+}
+</string>
+           </property>
+           <property name="pageStep">
+            <number>5</number>
+           </property>
+           <property name="sliderPosition">
+            <number>0</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="invertedAppearance">
+            <bool>false</bool>
+           </property>
+           <property name="invertedControls">
+            <bool>false</bool>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::TickPosition::NoTicks</enum>
+           </property>
+           <property name="tickInterval">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontal_spacer">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="meuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>700</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Montserrat</family>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(200, 200, 200);
+background-color: rgb(45,45,45)</string>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="file_act"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <action name="actionOpen_File">
+   <property name="text">
+    <string>Open File</string>
+   </property>
+  </action>
+  <action name="file_act">
+   <property name="text">
+    <string>Открыть</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

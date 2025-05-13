@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>add_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png</file>
+    <file>pause_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.png</file>
+    <file>redo_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png</file>
+    <file>play_arrow_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24 (1).png</file>
+    <file>skip_next_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.png</file>
+    <file>skip_previous_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.png</file>
+    <file>stop_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.png</file>
+    <file>volume_off_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.png</file>
+    <file>volume_up_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.png</file>
+  </qresource>
+</RCC>

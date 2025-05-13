@@ -1,0 +1,41 @@
+QWidget {
+	color: white;
+	background-color: #141414;
+	font-family: Robot;
+	font-size: 16pt;
+	font-weight: 600;
+}
+
+QPushButton {
+	background-color: transparent;
+	border: none;
+}
+
+QPushButton:hover {
+	background-color: #303030;
+}
+
+QPushButton:pressed {
+	background-color: #454545;
+}
+
+Hi! Today I gonna tell you about my last trip to Romania. While we were driving,
+many people had gotten sick, including me. The trip lasted a whole 14 hours!
+We climbed to the monastery because the monastery was on a mountain. 
+We spent 1 week there. I was with Maxim and another Maxim on the 3rd floor,
+the beds were uncomfortable, the room was small, because of the water, which was not there, 
+on the 1st day we went to bed dirty. And on the 2nd floor it was the opposite,
+but I don't know if they had water there. But besides that, in the monastery 
+you can play badminton, basketball, football, tennis and much more. There were also lessons in
+music, history, literature, geography, drawing and others. We also visited different museums 
+about castles, animals, climbed a mountain and so on. It was fun and memorable. Thank you for the good time.
+
+Гончарство з'явилася десь під час Києвської-Русі. Кожен виробу з глини мав свій образ. 
+Тільки специалісти вміли розрізняти глину. Гончари, використовували в чистому віді, 
+глину зберігали у подвір'ї для сушки, чим більше тим краще. Глину били та стругали. 
+Після цього глину розкачували у різної довжини ковбаски, брали шматочок, обробували і 
+так далі. Після обробки, вироби сушили на подвір'ї чи в гончарній печі. Треба було стежити за температурою. 
+Сушка, зазвичай, займало добу. Спочатку сушили на слабому огні, потім на середньому, а потім вже насильному. 
+Розписи робили з фарби і фарбували пером.
+  
+  
