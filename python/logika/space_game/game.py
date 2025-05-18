@@ -1,10 +1,9 @@
 from pygame import *
 from settings import SCREEN_WIDTH, SCREEN_HEIGHT
-from assets import player_img
 
 class Player:
     def __init__(self):
-        self.image = player_img
+        #self.image = player_img
         self.rect = self.image.get_rect(center=(SCREEN_WIDTH//2, SCREEN_HEIGHT//2))
         self.speed = 5
 

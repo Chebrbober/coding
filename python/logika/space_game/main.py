@@ -1,6 +1,6 @@
-from settings import FPS, SCREEN_WIDTH, SCREEN_HEIGHT
 from fade import fading
-#from menu import Menu
+from settings import SCREEN_HEIGHT, SCREEN_WIDTH, FPS
+from menu import Menu, Button
 #from game import Game
 from pygame import *
 from sys import *
@@ -9,11 +9,13 @@ from sys import *
 init()
 mixer.init()
 
-
 screen = display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 display.set_caption("Space Rush")
 clock = time.Clock()
-fps = 60
+
+# Цвета
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
 
 move_right = False
 move_left = False
