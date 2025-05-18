@@ -1,6 +1,9 @@
 from pygame import *
 
+fading = False
+
 def fade_out(surface, speed=10):
+    fading = True
     fade = Surface(surface.get_size())
     fade.fill((0, 0, 0))
     for alpha in range(0, 255, speed):

@@ -1,4 +1,5 @@
 from settings import FPS, SCREEN_WIDTH, SCREEN_HEIGHT
+from fade import fading
 #from menu import Menu
 #from game import Game
 from pygame import *
@@ -19,17 +20,14 @@ move_left = False
 move_up = False
 move_down = False
 
-class GameSprite(sprite.Sprite):
-    pass
-
-def something():
-    pass
-
+state = "game"
 running = True
 while running:
     for e in event.get():
         if e.type == QUIT:
             running = False
+        if not fading:
+            pass
         #current_scene.handle_event(event)
 
     #current_scene.update()
