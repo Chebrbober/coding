@@ -2,7 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/gui_projects/game" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/gui_projects/game_repo/pygame_project" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/projects/game" vcs="Git" />
   </component>
 </project>
