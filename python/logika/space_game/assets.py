@@ -41,9 +41,17 @@ player_default = load_image("images/game/player.png", (112, 105))
 enemy_scout_default = load_image("images/game/enemy_scout.png", (96, 90))
 enemy_bomber_default = load_image("images/game/enemy_bomber.png", (96, 90))
 boss_default = load_image("images/game/boss.png", (216, 291))
-enemy_projectile = load_image("images/game/projectiles/enemy_projectile.png", (5, 10))
-boss_projectile = load_image("images/game/projectiles/boss_projectile.png", (35, 12))
-player_projectile = load_image("images/game/projectiles/player_projectile.png", (5, 10))
+enemy_projectile = load_image("images/game/projectiles/enemy_projectile.png", (10, 15))
+boss_projectile = load_image("images/game/projectiles/boss_projectile.png", (50, 25))
+player_projectile = load_image("images/game/projectiles/player_projectile.png", (10, 15))
+
+restart_button_none = load_image("images/menu/restart_0.png", (234, 90))
+restart_button_hovered = load_image("images/menu/restart_1.png", (234, 90))
+restart_button_pressed = load_image("images/menu/restart_2.png", (234, 90))
+
+menu_button_none = load_image("images/menu/menu_0.png", (186, 90))
+menu_button_hovered = load_image("images/menu/menu_1.png", (186, 90))
+menu_button_pressed = load_image("images/menu/menu_2.png", (186, 90))
 
 player_explosion = []
 for i in range(13): # Измени 5 на количество твоих кадров
@@ -61,4 +69,7 @@ boss_explosion = []
 for i in range(11):
     boss_explosion.append(load_image(f"images/game/enemy_explosion/boss_explosions/explosion_{i}.png", (216, 291)))
 
-#levelone_music = "music/levelone_theme.mp3"
+levelone_music = "audio/levelone_music.mp3"
+leveltwo_music = "audio/leveltwo_music.mp3"
+win_music = "audio/win_music.mp3"
+gameover_music = "audio/gameover_music.mp3"
