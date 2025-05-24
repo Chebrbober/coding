@@ -40,7 +40,9 @@ laser_blast = "audio/laser_blast.wav"
 player_default = load_image("images/game/player.png", (112, 105))
 enemy_scout_default = load_image("images/game/enemy_scout.png", (96, 90))
 enemy_bomber_default = load_image("images/game/enemy_bomber.png", (96, 90))
+boss_default = load_image("image/game/boss.png", (216, 291))
 enemy_projectile = load_image("images/game/projectiles/enemy_projectile.png", (5, 10))
+boss_projectile = load_image("images/game/projectiles/boss_projectile.png", (35, 12))
 player_projectile = load_image("images/games/projectiles/player_projectile.png", (5, 10))
 
 player_explosion = []
@@ -55,5 +57,9 @@ for i in range(10):
 enemy_bomber_explosion = []
 for i in range(9): 
     enemy_bomber_explosion.append(load_image(f"images/game/enemy_explosion/bomber_explosions/explosion_{i}.png", (96, 90))) # Размер врага
+
+boss_explosion = []
+for i in range(11):
+    boss_explosion.append(load_image(f"images/game/enemy_explosion/boss_explosions/explosion_{i}.png", (216, 291)))
 
 #levelone_music = "music/levelone_theme.mp3"

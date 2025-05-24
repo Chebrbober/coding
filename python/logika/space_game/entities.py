@@ -10,7 +10,6 @@ class Player(sprite.Sprite):
         self.rect = self.image.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2))
         self.speed = 5
         self.hp = 100 # Здоровье игрока
-        self.max_hp = 100
         self.projectiles_group = sprite.Group() # Группа для пуль игрока
         self.projectile_img = projectile_img # Картинка для пуль игрока
 
@@ -55,8 +54,7 @@ class Enemy(sprite.Sprite):
         self.image = image
         self.rect = self.image.get_rect(topleft=(x, y))
         self.speed = random.randint(1, 3)
-        self.hp = random.randint(30, 60) # Здоровье врага
-        self.max_hp = self.hp
+        self.hp = random.randint(40, 60) # Здоровье врага
         self.projectile_img = projectile_img # Картинка для пуль врага
         self.projectiles_group = sprite.Group() # Группа для пуль врага
 
