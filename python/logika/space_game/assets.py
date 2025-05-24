@@ -40,18 +40,17 @@ laser_blast = "audio/laser_blast.wav"
 player_default = load_image("images/game/player.png", (112, 105))
 enemy_scout_default = load_image("images/game/enemy_scout.png", (96, 90))
 enemy_bomber_default = load_image("images/game/enemy_bomber.png", (96, 90))
-boss_default = load_image("image/game/boss.png", (216, 291))
+boss_default = load_image("images/game/boss.png", (216, 291))
 enemy_projectile = load_image("images/game/projectiles/enemy_projectile.png", (5, 10))
 boss_projectile = load_image("images/game/projectiles/boss_projectile.png", (35, 12))
-player_projectile = load_image("images/games/projectiles/player_projectile.png", (5, 10))
+player_projectile = load_image("images/game/projectiles/player_projectile.png", (5, 10))
 
 player_explosion = []
 for i in range(13): # Измени 5 на количество твоих кадров
-    # Убедись, что путь к файлам и их названия соответствуют твоим
-    player_explosion.append(load_image(f"images/animations/player_explosion/explosion_{i}.png", (112, 105)))
+    player_explosion.append(load_image(f"images/game/player_explosion/explosion_{i}.png", (112, 105)))
 
 enemy_scout_explosion = []
-for i in range(10): 
+for i in range(9): 
     enemy_scout_explosion.append(load_image(f"images/game/enemy_explosion/scout_explosions/explosion_{i}.png", (96, 90))) # Размер врага
 
 enemy_bomber_explosion = []

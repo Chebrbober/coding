@@ -33,7 +33,7 @@ class Player(sprite.Sprite):
             print("Игрок мертв!")
 
     def shoot(self):
-        projectile = PlayerProjectile(self.rect.centerx, self.rect.top, self.projectile_img)
+        projectile = Projectile(self.rect.centerx, self.rect.top, self.projectile_img)
         self.projectiles_group.add(projectile)
         # mixer.Sound(shoot_sound).play() # Если есть звук выстрела
 
@@ -78,7 +78,7 @@ class Enemy(sprite.Sprite):
             self.kill() # Удаляет врага из всех групп, в которых он состоит
 
     def shoot(self):
-        projectile = EnemyProjectile(self.rect.centerx, self.rect.bottom, self.projectile_img)
+        projectile = Projectile(self.rect.centerx, self.rect.bottom, self.projectile_img)
         self.projectiles_group.add(projectile)
 
     def update(self):
@@ -121,27 +121,40 @@ class Enemy(sprite.Sprite):
         self.projectiles_group.update()
 
 # Класс пули игрока
-class PlayerProjectile(sprite.Sprite):
-    def __init__(self, x, y, image):
+class Projectile(sprite.Sprite):
+    def __init__(self, x, y, image, speed, owner_type): # Добавляем owner_type
         super().__init__()
         self.image = image
         self.rect = self.image.get_rect(center=(x, y))
-        self.speed = 10
+        self.speed = speed
+        self.owner_type = owner_type # 'player', 'enemy', 'boss' (или просто 'player'/'enemy')
 
     def update(self):
-        self.rect.y -= self.speed # Пуля летит вверх
-        if self.rect.bottom < 0:
-            self.kill()
+        if self.owner_type == "player":
+            self.rect.y -= self.speed # Пуля игрока летит вверх
+            if self.rect.bottom < 0:
+                self.kill()
+        else: # Для врагов и боссов
+            self.rect.y += self.speed # Пули врагов летят вниз
+            if self.rect.top > SCREEN_HEIGHT:
+                self.kill()
 
-# Класс пули врага
-class EnemyProjectile(sprite.Sprite):
-    def __init__(self, x, y, image):
+class Explosion(sprite.Sprite):
+    def __init__(self, x, y, frames):
         super().__init__()
-        self.image = image
+        self.frames = frames
+        self.current_frame = 0
+        self.image = self.frames[self.current_frame]
         self.rect = self.image.get_rect(center=(x, y))
-        self.speed = 7 # Пуля врага может быть медленнее или быстрее
+        self.animation_speed = 4
+        self.frame_counter = 0
 
     def update(self):
-        self.rect.y += self.speed # Пуля летит вниз
-        if self.rect.top > SCREEN_HEIGHT:
-            self.kill()
+        self.frame_counter += 1
+        if self.frame_counter >= self.animation_speed:
+            self.frame_counter = 0
+            self.current_frame += 1
+            if self.current_frame < len(self.frames):
+                self.image = self.frames[self.current_frame]
+            else:
+                self.kill()
