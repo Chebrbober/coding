@@ -308,15 +308,17 @@ class BaseLevel(BaseScene):
         self.all_sprites.draw(surface)
 
         # Отрисовка HP
-        font_for_hp = pygame.font.SysFont(None, 30)
+        font_path = "NeuePixelSans.ttf"
+        try:
+            font_for_hp = pygame.font.Font(font_path, 30)
+        except pygame.error as e:
+            print(f"Ошибка загрузки шрифта {font_path}: {e}. Используем системный шрифт.")
+            font_for_hp = pygame.font.SysFont(None, 30) # Возвращаемся к системному шрифту, если свой не загрузился
+
         hp_text = f"HP: {self.player.hp}"
         text_surface = font_for_hp.render(hp_text, True, (255, 255, 255))
-        surface.blit(text_surface, (10, 10))
-
-        # Очки отображаются только в LevelTwo (или по необходимости)
-        # score_text = f"Score: {self.score}"
-        # text_surface = font.render(score_text, True, (255, 255, 255))
-        # surface.blit(text_surface, (SCREEN_WIDTH - text_surface.get_width() - 10, 10))
+        surface.blit(board_hp, (20, 823))
+        surface.blit(text_surface, (36, 840))
 
 class LevelOne(BaseLevel):
     def __init__(self):
@@ -422,10 +424,10 @@ class GameOverScene(BaseScene):
         super().__init__()
         print("Game Over Screen!")
 
-        self.restart_button = Button(SCREEN_WIDTH // 2 - 110, SCREEN_HEIGHT // 2 + 100,
-                                   [restart_button_none, restart_button_hovered, restart_button_pressed])
-        self.menu_button = Button(SCREEN_WIDTH // 2 + 120, SCREEN_HEIGHT // 2 + 100,
+        self.menu_button = Button(SCREEN_WIDTH // 2 - 125, SCREEN_HEIGHT // 2 + 75,
                                   [menu_button_none, menu_button_hovered, menu_button_pressed])
+        self.restart_button = Button(SCREEN_WIDTH // 2 + 110, SCREEN_HEIGHT // 2 + 75,
+                                     [restart_button_none, restart_button_hovered, restart_button_pressed])
 
     def handle_event(self, event):
         pass
@@ -446,7 +448,8 @@ class GameOverScene(BaseScene):
 
     def draw(self, surface):
         super().draw(surface)
-
+        surface.blit(board_for_end, (SCREEN_WIDTH // 2 - 280, SCREEN_HEIGHT // 3))
+        surface.blit(game_over, (SCREEN_WIDTH // 2 - 165, SCREEN_HEIGHT // 3 + 35))
         self.restart_button.draw(surface)
         self.menu_button.draw(surface)
 
@@ -457,9 +460,9 @@ class WinScene(BaseScene):
         super().__init__()
         print("Win Screen!")
 
-        self.menu_button = Button(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 50,
+        self.menu_button = Button(SCREEN_WIDTH // 2 - 125, SCREEN_HEIGHT // 2 + 75,
                                   [menu_button_none, menu_button_hovered, menu_button_pressed])
-        self.restart_button = Button(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 - 50,
+        self.restart_button = Button(SCREEN_WIDTH // 2 + 110, SCREEN_HEIGHT // 2 + 75,
                                      [restart_button_none, restart_button_hovered, restart_button_pressed])
 
     def handle_event(self, event):
@@ -481,6 +484,7 @@ class WinScene(BaseScene):
 
     def draw(self, surface):
         super().draw(surface)
-
+        surface.blit(board_for_end, (SCREEN_WIDTH // 2 - 280, SCREEN_HEIGHT // 3))
+        surface.blit(victory, (SCREEN_WIDTH // 2 - 145, SCREEN_HEIGHT // 3 + 35))
         self.restart_button.draw(surface)
         self.menu_button.draw(surface)

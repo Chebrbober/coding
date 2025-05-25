@@ -53,6 +53,11 @@ menu_button_none = load_image("images/menu/menu_0.png", (186, 90))
 menu_button_hovered = load_image("images/menu/menu_1.png", (186, 90))
 menu_button_pressed = load_image("images/menu/menu_2.png", (186, 90))
 
+board_for_end = load_image("images/menu/board_1.png", (565, 325))
+victory = load_image("images/menu/victory.png", (300, 120))
+game_over = load_image("images/menu/game_over.png", (325, 120))
+board_hp = load_image("images/menu/board.png", (125, 70))
+
 player_explosion = []
 for i in range(13): # Измени 5 на количество твоих кадров
     player_explosion.append(load_image(f"images/game/player_explosion/explosion_{i}.png", (112, 105)))
@@ -72,4 +77,4 @@ for i in range(11):
 levelone_music = "audio/levelone_music.mp3"
 leveltwo_music = "audio/leveltwo_music.mp3"
 win_music = "audio/win_music.mp3"
-gameover_music = "audio/gameover_music.mp3"
+gameover_music = "audio/gameover_music.wav"
