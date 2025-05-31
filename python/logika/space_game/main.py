@@ -1,3 +1,5 @@
+# Цей модуль є "мозком" гри. Він керує всім процесом:
+# коли показати меню, коли почати гру, коли закінчити. Він як головний керуючий.
 from settings import SCREEN_HEIGHT, SCREEN_WIDTH, FPS
 from scenes import Menu, LevelOne, LevelTwo, GameOverScene, WinScene
 import pygame
@@ -73,12 +75,9 @@ while running:
                 pygame.mixer.music.stop()
             current_playing_music_path = None # Сбрасываем трек
 
-    # --- Отрисовка сцены ---
+    # --- Відмальовка сцени ---
     screen.fill((0, 0, 0)) # Очищаем экран черным цветом перед отрисовкой сцены
     current_scene.draw(screen)
-    
-    # Отрисовка затемнения/проявления поверх всего
-    # Убедитесь, что `fade_alpha` и `is_fading` доступны в `current_scene`
     if current_scene.is_fading or current_scene.fade_alpha > 0:
         draw_fade_overlay(screen, current_scene.fade_alpha)
 

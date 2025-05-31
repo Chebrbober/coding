@@ -1,7 +1,10 @@
-from pygame import *
+# Цей модуль робить плавні переходи між сценами, затемнюючи або проявляючи екран
+import pygame
+from pygame import * # Імпортуємо всі функції з Pygame
 
 def draw_fade_overlay(surface, current_alpha):
-    """Рисует затемняющий или проявляющийся прямоугольник с заданной прозрачностью."""
-    overlay = Surface(surface.get_size(), SRCALPHA) # SRCALPHA для прозрачности
-    overlay.fill((0, 0, 0, current_alpha)) # Alpha в последнем параметре
-    surface.blit(overlay, (0, 0))
+    """Малює чорний затемнюючий або проявляючий прямокутник
+    поверх усього екрану з заданою прозорістю."""
+    overlay = Surface(surface.get_size(), SRCALPHA) # Створюємо нову поверхню розміром з екран, з підтримкою альфа-каналу
+    overlay.fill((0, 0, 0, current_alpha)) # Заповнюємо поверхню чорним кольором з вказаною прозорістю
+    surface.blit(overlay, (0, 0)) # Накладаємо оверлей на основний екран
